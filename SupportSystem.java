@@ -11,8 +11,8 @@ import java.util.HashSet;
  * It contains a loop that repeatedly reads input and generates
  * output until the users wants to leave.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
+ * @author Zachary Harris
+ * @version 12/5/21
  */
 public class SupportSystem
 {
@@ -38,10 +38,15 @@ public class SupportSystem
 
         printWelcome();
 
+        
+        
         while(!finished) {
             HashSet<String> input = reader.getInput();
 
-            if(input.contains("bye")) {
+            if(input.size() == 0){
+                System.out.println();
+            }
+            else if(input.contains("bye")) {
                 finished = true;
             }
             else {
